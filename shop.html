@@ -83,6 +83,150 @@
   outline: none;
 }
     }
+    /* Modal oynasi uchun dizayn */
+.product-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: rgb(157, 12, 241);
+  margin-right: 10px;
+}
+
+.discount-price {
+  font-weight: bold;
+  color: #e60000;
+  font-size: 20px;
+}
+.modal-product-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.modal-product-sizes {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+.modal-product-sizes span {
+  display: inline-block;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.modal-product-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.modal-product-desc {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn-order {
+  background-color: #ff6a00;
+  color: white;
+}
+
+.btn-order:hover {
+  background-color: #e65a00;
+}
+
+.btn-cart {
+  background-color: #222;
+  color: white;
+}
+
+.btn-cart:hover {
+  background-color: #000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* Kattalashtirilgan rasm uchun modal */
+.image-zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.image-zoom-modal img {
+  max-width: 70%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
   </style>
 </head>
 
@@ -122,7 +266,7 @@
           <!-- Search results will be displayed here -->
         </div>
       </div>
-
+  
       <!-- our-products -->
       <div class="our-products">
         <div class="p-1" id="products">
@@ -132,7 +276,16 @@
           <div class="na-p-1-desc" id="products-desc">
             <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
           </div>
-          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+          <button class="see-detail-btn"
+          data-image="7.jpg"
+          data-title="erkaklar krasovkasi"
+          data-description="Erkaklar krassovkalari yoz, bahor, kuzgi mavsumlar uchun "
+          data-sizes="40,41,42,43,44"
+          data-price="299.000"
+          data-discount="163.000">
+          
+          See Detail
+        </button>
         </div>
         <div class="p-2" id="products">
           <div class="p-2-image" id="products-images">
@@ -141,7 +294,15 @@
           <div class="p-2-desc" id="products-desc">
             <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
           </div>
-          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+          <button class="see-detail-btn"
+          data-image="2.2.jpg"
+          data-title="Erkaklar uchun Dvoyka"
+          data-description="Dvoyka erkaklar uchun yozgi sportivka 2 ip polyester HB mato"
+          data-price="500.000"
+          data-sizes="L,XL,XXL"
+          data-discount="265.000">
+          See Detail
+        </button>
         </div>
         <div class="p-3" id="products">
           <div class="p-3-image" id="products-images">
@@ -150,7 +311,12 @@
           <div class="p-3-desc" id="products-desc">
             <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
           </div>
-          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+          <button class="see-detail-btn"
+          data-image="7777.jpg"
+          data-title="DVOYKA"
+          data-description="Bu zamonaviy oq sport poyabzal juda qulay va bardoshlidir. 2025 yilgi yangi model.">
+          See Detail
+        </button>
         </div>
         <div class="p-4" id="products">
           <div class="p-4-image" id="products-images">
@@ -159,7 +325,12 @@
           <div class="p-4-desc" id="products-desc">
             <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
           </div>
-          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+          <button class="see-detail-btn"
+          data-image="7.jpg"
+          data-title="Oq sport poyabzal"
+          data-description="Bu zamonaviy oq sport poyabzal juda qulay va bardoshlidir. 2025 yilgi yangi model.">
+          See Detail
+        </button>
         </div>
         <div class="p-1" id="products">
           <div class="p-1-image" id="products-images">
@@ -168,7 +339,12 @@
           <div class="na-p-1-desc" id="products-desc">
             <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
           </div>
-          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+          <button class="see-detail-btn"
+          data-image="7.jpg"
+          data-title="Oq sport poyabzal"
+          data-description="Bu zamonaviy oq sport poyabzal juda qulay va bardoshlidir. 2025 yilgi yangi model.">
+          See Detail
+        </button>
         </div>
         <div class="p-2" id="products">
           <div class="p-2-image" id="products-images">
