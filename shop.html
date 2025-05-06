@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop</title>
+  <link rel="stylesheet" href="responsive-shop.css">
+  <link rel="stylesheet" href="Online Shoes Marketing.css">
+  <style>
+    .our-products {
+      /* background-color: #b24305; */
+      box-sizing: border-box;
+      padding: 0rem 9%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    #products {
+      /* background-color: aqua; */
+      border-radius: 0 30px 0 30px;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      padding: .6rem .6rem .5rem .6rem;
+      box-shadow: .5px 10px 10px rgba(220, 220, 220, 0.5);
+    }
+
+    #products img {
+      border-radius: 0 30px 0 30px;
+    }
+    #products h3{
+      font-size: 1rem;
+    }
+
+    #products input {
+      width: fit-content;
+      padding: .3rem 1.3rem;
+      border-radius: 20px;
+      color: white;
+      background-color: #b24305;
+      border: 1px solid transparent;
+    }
+
+    #products input:hover {
+      background-color: transparent;
+      color: #b24305;
+      border: 1px solid #b24305;
+      transition: all .4s ease-in-out 0s;
+    }
+
+    @media screen  and (max-width: 992px) {
+      .our-products{
+        padding: 0rem 5%;
+      }
+    }
+    @media screen  and (max-width: 860px) {
+      .our-products {
+      box-sizing: border-box;
+      padding: 0rem 6%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    }
+    @media screen and (max-width: 480px){
+      .our-products {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    
+#searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 80%;
+  outline: none;
+}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home-page">
+    <div class="home">
+      <div class="title">
+        <div class="title-text">
+          <h1>nline Shoes Marketing</h1>
+        </div>
+        <div class="title-sbox">
+          <button>Explore Products</button>
+        </div>
+      </div>
+      <!-- nav bar -->
+      <nav class="navbar">
+        <div class="navbar-toggle" onclick="toggleMenu()">
+          <div class="toggle-line"></div>
+          <div class="toggle-line"></div>
+          <div class="toggle-line"></div>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <!-- search bar -->
+      <div class="searching">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="searchResults">
+          <!-- Search results will be displayed here -->
+        </div>
+      </div>
+
+      <!-- our-products -->
+      <div class="our-products">
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="7.jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="2.2.jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="7777.jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="15.jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="0 (1).jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="0 (2).jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="0 (3).jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="0 (4).jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="0 (5).jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="0 (6).jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="0 (8).jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="0 (9).jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="0 (10).jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="0 (11).jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="22.jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="222222.jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="1818.jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="818.jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="1313.jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="4.jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="313.jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="12.jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="666.jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="0099.jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-1" id="products">
+          <div class="p-1-image" id="products-images">
+            <img src="9090.jpg" alt="">
+          </div>
+          <div class="na-p-1-desc" id="products-desc">
+            <h3>dolor sit amet consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-2" id="products">
+          <div class="p-2-image" id="products-images">
+            <img src="9900.jpg" alt="">
+          </div>
+          <div class="p-2-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sitr adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-3" id="products">
+          <div class="p-3-image" id="products-images">
+            <img src="90.jpg" alt="">
+          </div>
+          <div class="p-3-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit r adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+        <div class="p-4" id="products">
+          <div class="p-4-image" id="products-images">
+            <img src="9999.jpg" alt="">
+          </div>
+          <div class="p-4-desc" id="products-desc">
+            <h3>Lorem ipsum dolor sit consectetur adipisicing elit. Adipisci, reprehenderit.</h3>
+          </div>
+          <input type="button" value="See Detail" title="Click here to see more detail of the product">
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- footer -->
+      <div class="footer">
+        <div class="categories" id="footer-fid">
+          <h3>Categories</h3>
+          <div class="c-names" id="footer-ide">
+            <a href="#">Brands</a>
+            <a href="#">Best Features</a>
+            <a href="#">Shoes Sizing</a>
+            <a href="#">Shoes Styling</a>
+          </div>
+        </div>
+        <div class="contact" id="footer-fid">
+          <h3>Contact Us</h3>
+          <div class="c-numbers" id="footer-idee">
+            <p>ronlinesm@gmail.com</p>
+            <p>+2342343258</p>
+            <p>+3483445567</p>
+            <p>+rosmoulook.com</p>
+          </div>
+        </div>
+        <div class="quick-links" id="footer-fid">
+          <h3>Contact Us</h3>
+          <div class="q-links" id="footer-ide">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+        <div class="follow" id="footer-fid">
+          <h3>Follow Us on</h3>
+          <div class="q-links" id="footer-ide-last">
+            <a href="https://www.instagram.com"><img src="instagram.png" alt=""></a>
+            <a href="https://www.facebook.com"><img src="facebook.png" alt=""></a>
+            <a href="https://www.tiktok.com"><img src="tiktok.png" alt=""></a>
+            <a href="https://www.whatsapp.com"><img src="whatsapp.png" alt=""></a>
+            <a href="https://www.telegram.com"><img src="send.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="c-r">
+      copyright © Online Shoes marketing. All rights reserved. owner (Rahim Ullah)
+    </div>
+
+    <!-- js link -->
+    <script src="script.js"></script>
+</body>
+
+</html>

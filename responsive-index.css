@@ -1,0 +1,113 @@
+/* this is for footer */
+@media screen and (max-width: 1140px) {
+    
+.footer{
+    padding: 2rem 8%;
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    cursor: default;
+  }
+}
+
+/* responsive for 1026px */
+
+@media screen and (max-width: 1026px) {
+    .home-demo{
+        visibility: hidden;
+    }
+    .na-products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .na-p-1{
+        display: none;
+    }
+    .pq-products{
+        padding: 4rem 8%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 4%;
+      }
+      
+}
+/* responsive for 860px */
+@media screen and (max-width: 860px) {
+    .na-products{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+    .footer{
+        padding: 2rem 8%;
+        display: grid;
+        grid-gap: 3%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 2rem;
+      }
+}
+/* responsive for 767px */
+@media screen and (max-width: 768px) {
+    .na-products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .na-p-3{
+        display: none;
+    }
+
+    .pq-products{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+/* responsive for 542px */
+@media screen and (max-width: 542px) {
+    .new-arrivals{
+        margin-top: -20%;
+    }
+    .home-below{
+        text-align: center;
+    }
+}
+/* responsive for 480px */
+@media screen and (max-width: 480px) {
+    .home-below h1{
+        color: transparent;
+        font-size: 0px;
+    }
+    .home-below h1::before{
+        content: 'Step into style and comfort with our exquisite collection of footwear';
+        text-align: center;
+        color: aliceblue;
+        font-size: 2rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    .na-products{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .pq-products{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .footer{
+        margin-top: 6rem;
+        padding: 2rem 8%;
+        display: grid;
+        grid-gap: 3%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 2rem;
+      }
+
+      #footer-ide-last{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+}

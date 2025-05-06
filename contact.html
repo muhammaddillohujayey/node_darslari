@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="respoinsive-cus.css">
+    <link rel="stylesheet" href="Online Shoes Marketing.css">
+    <style>
+        .contact-now{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5%;
+            padding: 2rem 8%;
+        }
+        .contact-now h1 {
+      color: #b24305;
+      /* text-align: center; */
+      font-size: 3rem;
+      font-family: shoes;
+    }
+
+    .left-contact-info h3 {
+      color: #b24305;
+      font-family: nunitoxl;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
+
+    .left-contact-info {
+      font-family: nunitol;
+      color: gray;
+      letter-spacing: 2px;
+    }
+    form span{
+        color: #b24305;
+    }
+    form{
+        /* border: 1px solid #b24305; */
+        display: flex;
+        padding: 2rem;
+        flex-direction: column;
+        box-sizing: border-box;
+        box-shadow: 1px 1px 10px gray;
+        margin-top: 10rem;
+        border-radius: 0 30px 0 30px ;
+    }
+    form button{
+        margin-top: 1rem;
+        padding: .3rem 2rem;
+        width: fit-content;
+    }
+    form input{
+        padding: 6px;
+        border: 0 solid transparent;
+        border-bottom: 1px solid #b2440528;
+        margin: 10px 0 20px 0;
+    }
+    form input:hover{
+        border: 0px solid transparent;
+        border-bottom: 1px solid #b244052a;
+    }
+    form input:active{
+        border: 0px solid transparent;
+    }
+    textarea{
+        margin-top: 10px;
+        border: 1px solid #b244052f;
+        padding: .5rem;
+        resize: vertical;
+    }
+    @media screen and (max-width: 992px) {
+        .contact-now{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2%;
+            padding: 2rem 4%;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .contact-now{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 2%;
+            padding: 2rem 4%;
+        }
+        .right-contact-info{
+            padding: 2rem;
+            margin: 0;
+            background-color: #b24305;
+        }
+        form{
+            /* margin: 2rem 0 0 0; */
+            margin-bottom: -20rem;
+        }
+        .left-contact-info{
+            text-align: justify;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .contact-now h1 {
+            font-size: 2rem;
+        }
+        form{
+            padding: 1rem;
+        }
+
+        .right-contact-info{
+            /* padding: 2rem; */
+            margin: 0;
+            background-color: #b24305;
+        }
+        form{
+            /* margin: 2rem 0 0 0; */
+            margin-bottom: 0rem;
+        }
+    }
+    @media screen and (max-width: 290px) {
+        form{
+            width: 84%;
+        }
+        .left-contact-info{
+            width: 90%;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <div class="title">
+            <div class="title-text">
+                <h1>nline Shoes Marketing</h1>
+            </div>
+            <div class="title-sbox">
+                <button>Explore Products</button>
+            </div>
+        </div>
+        <!-- nav bar -->
+        <nav class="navbar">
+            <div class="navbar-toggle" onclick="toggleMenu()">
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+                <div class="toggle-line"></div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact-now">
+            <div class="left-contact-info">
+                <h1
+                    title="please fill the form for any inquiry, question, support and help and send a request to our team?">
+                    CONTACT US</h1>
+                <p>Welcome to our Online Shoes Marketing store! We are dedicated to providing you with the trendiest and
+                    most comfortable footwear options on the market. Whether you're looking for the perfect pair of
+                    running shoes, stylish boots, or elegant heels, we've got you covered. Our team is committed to
+                    delivering excellent customer service, and we're always here to assist you with any inquiries,
+                    feedback, or concerns you may have.</p>
+                <h3>Contact Information!</h3>
+                <p>
+                    Phone: You can reach our customer support team by calling us at [Phone Number]. Our lines are open
+                    [Days] from [Time] to [Time] [Timezone].
+                    Email: For non-urgent inquiries or general questions, you can email us at [Email Address]. We strive
+                    to respond to all emails within 24 hours.
+                </p>
+                <h3>
+                    Feedback and Suggestions:
+                </h3>
+                <p>
+                    Your feedback is invaluable to us. We are continually striving to improve our services, product
+                    selection, and website functionality. If you have any suggestions or ideas, please share them with
+                    us. We welcome all feedback as it helps us grow and cater to our customers better.
+                </p>
+                <h3>Address</h3>
+                <p>
+                <address>
+                    If you prefer traditional mail, you can send us letters or returns to the following address:
+                    [Company Name]
+                    [Street Address]
+                    [City, State, Zip Code]
+                    [Country]
+                </address>
+                </p>
+                <h3>Social Media</h3>
+                <p>Social Media:
+                    Stay connected with us through our social media channels for the latest product updates, promotions,
+                    and exclusive deals. Follow us on [Social Media Platforms] to be a part of our online community.</p>
+            </div>
+            <div class="right-contact-form">
+                <form action="">
+                    <label for="">Name<span>*</span></label>
+                    <input type="text" placeholder="Enter your full name" title="Enter your name eg:Rahim Ullah" required>
+                    <label for="email" name="email">Email<span>*</span></label>
+                    <input type="email" placeholder="Enter your Email address" title="Enter your Email eg:.....@gmail.com" name="email" required>
+                    <label for="no" name="email">Phone<span>*</span></label>
+                    <input type="tel" placeholder="Enter your phone number" title="Enter your Phone eg:.0333......" name="number" required>
+                    <label for="message" name="message">Message<span></span></label>
+                    <textarea name="text" id="text" cols="30" rows="10" value="Enter If you have extra message" placeholder="Enter your Message" maxlength="500"></textarea>
+                    <p><b>NOTE</b> You can type maximum 500 characters </p>
+                    <button>SUBMIT</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="categories" id="footer-fid">
+            <h3>Categories</h3>
+            <div class="c-names" id="footer-ide">
+                <a href="#">Brands</a>
+                <a href="#">Best Features</a>
+                <a href="#">Shoes Sizing</a>
+                <a href="#">Shoes Styling</a>
+            </div>
+        </div>
+        <div class="contact" id="footer-fid">
+            <h3>Contact Us</h3>
+            <div class="c-numbers" id="footer-idee">
+                <p>ronlinesm@gmail.com</p>
+                <p>+2342343258</p>
+                <p>+3483445567</p>
+                <p>+rosmoulook.com</p>
+            </div>
+        </div>
+        <div class="quick-links" id="footer-fid">
+            <h3>Contact Us</h3>
+            <div class="q-links" id="footer-ide">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="follow" id="footer-fid">
+            <h3>Follow Us on</h3>
+            <div class="q-links" id="footer-ide-last">
+                <a href="https://www.instagram.com"><img src="instagram.png" alt=""></a>
+                <a href="https://www.facebook.com"><img src="facebook.png" alt=""></a>
+                <a href="https://www.tiktok.com"><img src="tiktok.png" alt=""></a>
+                <a href="https://www.whatsapp.com"><img src="whatsapp.png" alt=""></a>
+                <a href="https://www.telegram.com"><img src="send.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- copyright -->
+    <div class="c-r">
+        copyright © Online Shoes marketing. All rights reserved. owner (Rahim Ullah)
+    </div>
+
+    <!-- js link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
