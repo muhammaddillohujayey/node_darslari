@@ -1,21 +1,24 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Detecting Device...</title>
-    <script>
-      // JavaScript orqali qurilmani aniqlash
-      if (window.innerWidth <= 768) {
-        // Telefonlar
-        window.location.href = "mobile.html";
+<head>
+  <meta charset="UTF-8" />
+  <title>Detecting Device...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    // Qurilmani aniqlash
+    document.addEventListener("DOMContentLoaded", function () {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        window.location.href = "mobile.html"; // Telefon versiyasi
       } else {
-        // Kompyuterlar
-        window.location.href = "desktop.html";
+        window.location.href = "desktop.html"; // Kompyuter versiyasi
       }
-    </script>
-  </head>
-  <body>
-    <p>Loading...</p>
-  </body>
+    });
+  </script>
+</head>
+<body>
+  <p>Detecting your device... Please wait.</p>
+</body>
 </html>
