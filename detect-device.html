@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qurilma aniqlanmoqda...</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .device-message {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn-enter {
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="device-message" id="deviceMessage">
+    Qurilmangiz aniqlanmoqda...
+  </div>
+  <button class="btn-enter" id="enterBtn" style="display:none;">Kirish</button>
+
+  <script>
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const messageEl = document.getElementById('deviceMessage');
+    const enterBtn = document.getElementById('enterBtn');
+
+    if (isMobile) {
+      messageEl.textContent = "Siz telefon qurilmadan kiryapsiz.";
+      enterBtn.onclick = () => window.location.href = "mobile.html"; // Telefon sahifa
+    } else {
+      messageEl.textContent = "Siz kompyuter qurilmadan kiryapsiz.";
+      enterBtn.onclick = () => window.location.href = "index.html"; // Kompyuter sahifa
+    }
+
+    enterBtn.style.display = "inline-block";
+  </script>
+
+</body>
+</html>

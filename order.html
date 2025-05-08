@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyurtma So‘rovnomasi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f0f0f0, #ffffff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #2196f3;
+    }
+
+    button {
+      width: 100%;
+      background: #2196f3;
+      color: #fff;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1976d2;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Buyurtma So‘rovnomasi</h2>
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="firstName">Ism</label>
+        <input type="text" id="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Familiya</label>
+        <input type="text" id="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefon raqami</label>
+        <input type="tel" id="phone" required placeholder="+998 90 123 45 67">
+      </div>
+      <div class="form-group">
+        <label for="email">Google akkaunt (email)</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="orderId">Buyurtma ID raqami</label>
+        <input type="text" id="orderId" required>
+      </div>
+      <div class="form-group">
+        <label for="size">Razmer</label>
+        <input type="text" id="size" required placeholder="M, L, XL, yoki sonli o‘lcham">
+      </div>
+      <div class="form-group">
+        <label for="color">Rang</label>
+        <input type="text" id="color" required placeholder="Masalan: qora, oq, qizil">
+      </div>
+      <button type="submit">Yuborish</button>
+    </form>
+  </div>
+
+  <script>
+    const TOKEN = '7586409321:AAGgu_O2N-QKaQx9o3HoKdqB809DkFnVKV0'; // <-- Bu yerga o'zingizning Telegram bot tokeningizni yozing
+    const CHAT_ID = '6388460910'; // <-- Bu yerga o'zingizning chat ID'ingizni yozing
+
+    document.getElementById('orderForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const ism = document.getElementById('firstName').value.trim();
+      const familiya = document.getElementById('lastName').value.trim();
+      const telefon = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const id = document.getElementById('orderId').value.trim();
+      const razmer = document.getElementById('size').value.trim();
+      const rang = document.getElementById('color').value.trim();
+
+      const message = `
+<b>🛍️ Yangi buyurtma!</b>\n
+👤 <b>Ism:</b> ${ism}
+👤 <b>Familiya:</b> ${familiya}
+📞 <b>Telefon:</b> ${telefon}
+✉️ <b>Google akkaunt:</b> ${email}
+🆔 <b>ID raqami:</b> ${id}
+📏 <b>Razmer:</b> ${razmer}
+🎨 <b>Rangi:</b> ${rang}
+      `;
+
+      fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: 'HTML'
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert("✅ Buyurtmangiz muvaffaqiyatli yuborildi!");
+        document.getElementById('orderForm').reset();
+      })
+      .catch(error => {
+        alert("❌ Xatolik yuz berdi. Qaytadan urinib ko‘ring.");
+        console.error("Xatolik:", error);
+      });
+    });
+  </script>
+
+</body>
+</html>
